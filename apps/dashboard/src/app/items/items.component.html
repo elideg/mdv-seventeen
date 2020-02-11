@@ -1,0 +1,16 @@
+<div class="container d-flex mt-3">
+  <div class="col-6">
+    <mdv-seventeen-items-list [items]="items$ | async"
+                          (selected)="selectItem($event)"
+                          (deleted)="deleteItem($event)">
+    </mdv-seventeen-items-list>
+  </div>
+
+  <div class="col-6">
+    <mdv-seventeen-items-details [item]="selectedItems"
+                              [form]="form"
+                              (saved)="saveItem($event)"
+                              (cancelled)="cancel()">
+    </mdv-seventeen-items-details>
+  </div>
+</div>
