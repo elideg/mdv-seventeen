@@ -7,7 +7,7 @@
   </div>
 
   <div class="col-6">
-    <mdv-seventeen-items-details [item]="selectedItems"
+    <mdv-seventeen-items-details [item]="selectedItem$ | async"
                               [form]="form"
                               (saved)="saveItem($event)"
                               (cancelled)="cancel()">

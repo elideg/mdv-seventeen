@@ -1,1 +1,19 @@
-<p>items-item works!</p>
+<div class="d-flex justify-content-center mt-3">
+  <button mat-button [routerLink]="['/items']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-6" *ngIf="items$ | async as item">
+    <mat-card-header class="align-self-center">
+      <mat-card-title>
+        <h3 mat-line>Drink Id</h3>
+        <p>{{item.id}}</p>
+        <h3 mat-line>Drink Title</h3>
+        <p>{{item.title}}</p>
+        <h3 mat-line>Drink description</h3>
+        <p>{{item.description}}</p>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<h3>test</h3>

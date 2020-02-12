@@ -7,13 +7,13 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { WildComponent } from './wild/wild.component';
 
 @NgModule({
+  declarations: [LoginComponent, ToolbarComponent, WildComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule
     ],
-  declarations: [LoginComponent, ToolbarComponent, WildComponent],
   exports: [LoginComponent, ToolbarComponent, WildComponent]
 })
 export class UiLibModule {}
